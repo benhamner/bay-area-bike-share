@@ -25,8 +25,8 @@ trip_2014_1.columns = trip_columns
 trip_2014_2.columns = trip_columns
 trip_2015.columns   = trip_columns
 
-weather = pd.concat([trip_2014_1, trip_2014_2, trip_2015])
-weather.to_csv("output/trip.csv", index=False)
+trip = pd.concat([trip_2014_1, trip_2014_2, trip_2015])
+trip.to_csv("output/trip.csv", index=False)
 
 weather_2014_1 = pd.read_csv("input/201402_babs_open_data/201402_weather_data.csv")
 weather_2014_2 = pd.read_csv("input/201408_babs_open_data/201408_weather_data.csv")
@@ -38,8 +38,4 @@ weather_2014_2.columns = weather_columns
 weather_2015.columns   = weather_columns
 
 weather = pd.concat([weather_2014_1, weather_2014_2, weather_2015])
-weather.to_csv("output/trip.csv", index=False)
-
-print(weather_2014_1.shape)
-print(weather_2014_2.shape)
-print(weather_2015.shape)
+weather.to_csv("output/weather.csv", index=False)
