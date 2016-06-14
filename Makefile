@@ -4,7 +4,7 @@ unzip:
 
 output/weather.csv:
 	mkdir -p output
-	python src/process.py
+	bpython src/process.py
 output/station.csv: output/weather.csv
 output/status.csv: output/weather.csv
 output/trip.csv: output/weather.csv
